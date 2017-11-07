@@ -8,6 +8,17 @@
 module.exports = {
 
   attributes: {
+    link_id : {
+        type: 'integer',
+        primaryKey: true,
+        autoIncrement: true
+    },
+    name : {
+        type : 'string'
+    },
+    url : {
+        type : 'string'
+    }
 
     // A reference to profile
     profile : {

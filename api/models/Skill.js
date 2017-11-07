@@ -8,10 +8,11 @@
 module.exports = {
 
   attributes: {
-    id : {
-        type : 'integer'
-    }
-
+    skill_id : {
+        type : 'integer',
+        primaryKey: true,
+        autoIncrement: true
+    },
     name : {
         type : 'string',
         required: true   

@@ -8,12 +8,24 @@
 module.exports = {
 
   attributes: {
-
-
-    // A reference to profile
-    profile : {
-        model : 'profile'
+    cevent_id : {
+        type: 'integer',
+        primaryKey: true,
+        autoIncrement: true
     }
+
+    account : {
+        model : 'account'
+    },
+
+    event : {
+        model : 'event'
+    }
+
+
+
+
+
   }
 };
 

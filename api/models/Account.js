@@ -7,9 +7,10 @@
 
  module.exports = {
   attributes: {
-    id : {
+    account_id : {
         type: 'integer',
-        primaryKey: true
+        primaryKey: true,
+        autoIncrement: true
     }
     username : {
         type : 'string',
@@ -19,11 +20,25 @@
     password : {
         type : 'string'
     },
-    
+
+    // One-to-many
+    // Account has one profile (singular, implemented on profile side)
     profile : {
         collection: 'profile',
         via: 'account'
+    },
+    // Account has a set of groups
+    groups : {
+        collection: 'group',
+        via : 'account'
+    },
+    // Account has a set of events
+    calendar_events : {
+        collection: 'calendar_event',
+        via: 'account'
     }
+
+
 }
 };
 

@@ -8,6 +8,23 @@
 module.exports = {
 
   attributes: {
+    project_id : {
+        type: 'integer',
+        primaryKey: true,
+        autoIncrement: true
+    },
+    name : {
+        type : 'string'
+    },
+    description : {
+        type : 'longtext'
+    },
+    start_date : {
+        type : 'date'
+    },
+    end_date : {
+        type : 'date'
+    },
     // A reference to profile
     profile : {
         model : 'profile'

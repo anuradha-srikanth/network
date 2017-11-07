@@ -8,7 +8,23 @@
 module.exports = {
 
   attributes: {
+    group_id : {
+        type: 'integer',
+        primaryKey: true,
+        autoIncrement: true
+    },
+    name : {
+        type : 'string',
+        required: true,
+        unique : true
+    },
+    description : {
+        type : 'longtext'
+    }
 
+    account : {
+        model : 'account'
+    }
   }
 };
 

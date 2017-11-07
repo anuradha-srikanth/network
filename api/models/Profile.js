@@ -8,7 +8,7 @@
  module.exports = {
 
   attributes: {
-    id : {
+    profile_id : {
         type: 'integer',
         primaryKey: true,
         autoIncrement: true
