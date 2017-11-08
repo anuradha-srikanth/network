@@ -25,6 +25,9 @@ module.exports = {
     end_date : {
         type : 'date'
     },
+    designation : {
+        type : 'string'
+    },
 
 
     // A reference to profile

@@ -6,18 +6,19 @@
  */
 
  module.exports = {
-
   attributes: {
+
+    // Primitive Attributes
     profile_id : {
         type: 'integer',
         primaryKey: true,
         autoIncrement: true
     }
-    first_name : {
+    firstName : {
         type : 'string',
         required: true   
     },
-    last_name : {
+    lastName : {
         type : 'string',
         required: true   
     },
@@ -31,7 +32,7 @@
     email : {
         type : 'email',   
     },
-
+    // Associations (relational attributes)
     // One-to-one
     // Profile belongs to account
     account : {
@@ -64,7 +65,14 @@
     links: {
         collection: 'links',
         via: 'profile'
-    }
+    },
+
+    // Functions
+    getFullName: function (){
+      return this.firstName + ' ' + this.lastName;
+    },
+
+
 }
 };
 
